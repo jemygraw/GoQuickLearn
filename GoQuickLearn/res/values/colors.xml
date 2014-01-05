@@ -1,0 +1,8 @@
+<resources>
+
+    <color name="prev_next_btn_bg_color">#2771a6</color>
+    <color name="prev_next_btn_fg_color">#fff</color>
+    <color name="top_nav_title_color">#fff</color>
+    <color name="top_nav_bg_color">#3a88c1</color>
+    <color name="about_bg">#eee</color>
+</resources>

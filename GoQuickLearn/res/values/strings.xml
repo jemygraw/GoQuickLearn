@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Go轻松学</string>
+    <string name="app_main_title">内容</string>
+    <string name="activity_content_view_title">内容</string>
+    <string name="activity_about_title">关于</string>
+    <string name="app_about">关于Go轻松学</string>
+    <string name="previous_chapter">上一节</string>
+    <string name="next_chapter">下一节</string>
+    <string name="logo_desc">Go轻松学</string>
+    <string name="publish_info">多科学堂出品</string>
+    <string name="weixin">微信公众号</string>
+    <string name="weixin_id">duokr_school</string>
+    <string name="qq_group">QQ群</string>
+    <string name="qq_group_id">332558747</string>
+    <string name="feedback_email">邮箱</string>
+    <string name="feedback_email_address">duokr.school@gmail.com</string>
+    <string name="go_lang_group">Go友团</string>
+    <string name="go_lang_group_link">http://baoz.me/#!/Go友团</string>
+    <string name="donate_info">如果你非常喜欢该应用，你可以为它支付你认可的价值金额。感谢支持 :-P！</string>
+    <string name="donate_address">https://me.alipay.com/jemygraw</string>
+
+</resources>
