@@ -39,8 +39,8 @@ func main() {
     x[3] = 2
     x[4] = 12
     var sum int
-    for _, i := range x {
-        sum += i
+    for _, elem := range x {
+        sum += elem
     }
     fmt.Println(sum)
 }
@@ -167,7 +167,7 @@ func main() {
     var x = make([]float64, 5)
     fmt.Println("Capcity:", cap(x), "Length:", len(x))
     var y = make([]float64, 5, 10)
-    fmt.Println("Capcity", cap(y), "Length", len(y))
+    fmt.Println("Capcity:", cap(y), "Length:", len(y))
 
     for i := 0; i &lt; len(x); i++ {
         x[i] = float64(i)
@@ -184,7 +184,7 @@ func main() {
 <p>输出结果为</p>
 
 <pre><code>Capcity: 5 Length: 5
-Capcity 10 Length 5
+Capcity: 10 Length: 5
 [0 1 2 3 4]
 [0 1 2 3 4]
 </code></pre>

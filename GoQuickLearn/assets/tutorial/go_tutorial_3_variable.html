@@ -110,7 +110,7 @@ func main() {
 }
 </code></pre>
 
-<p><code>变量`之所以称为变量，就是因为`它们的值在程序运行过程中可以发生变化`，但是`它们的变量类型是无法改变的`。因为`Go语言是静态语言`，并`不支持`程序运行过程中`变量类型发生变化`。比如如果你强行将一个字符串值赋值给定义为int的变量，那么会发生编译错误。即使是强制类型转换也是不可以的。`强制类型转换只支持同类的变量类型</code>。比如数值类型之间强制转换。</p>
+<p><code>变量</code>之所以称为变量，就是因为<code>它们的值在程序运行过程中可以发生变化</code>，但是<code>它们的变量类型是无法改变的</code>。因为<code>Go语言是静态语言</code>，并<code>不支持</code>程序运行过程中<code>变量类型发生变化</code>。比如如果你强行将一个字符串值赋值给定义为int的变量，那么会发生编译错误。即使是强制类型转换也是不可以的。`强制类型转换只支持同类的变量类型``。比如数值类型之间强制转换。</p>
 
 <p>下面我们看几个例子：</p>
 
@@ -278,7 +278,7 @@ import (
 func main() {
     const x string = "hello world"
     fmt.Println(x)
-    x = "hello world"
+    x = "i love go language"
     fmt.Println(x)
 }
 </code></pre>
@@ -288,7 +288,7 @@ func main() {
 <pre><code>./test_var.go:10: cannot assign to x
 </code></pre>
 
-<p>我们再看一个Go包math里面定义的Pi，用它来求圆的面积。</p>
+<p>我们再看一个Go包math里面定义的常量Pi，用它来求圆的面积。</p>
 
 <pre><code>package main
 

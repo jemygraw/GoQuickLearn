@@ -112,7 +112,7 @@ func main() {
 <p>输出结果为</p>
 
 <pre><code>hello 
-    world
+ world
 ----------
 hello \n world
 </code></pre>
@@ -145,8 +145,27 @@ func main() {
 helloworld
 </code></pre>
 
-<p>这里我们看到a[1]得到的是一个整数，这就证明了上面<code>"Go的字符串是由字节组成的这句话"</code>。我们还可以再验证一下。
-输出</p>
+<p>这里我们看到a[1]得到的是一个整数，这就证明了上面<code>"Go的字符串是由字节组成的这句话"</code>。我们还可以再验证一下。</p>
+
+<pre><code>package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    var a string = "你"
+    var b string = "好"
+    fmt.Println(len(a))
+    fmt.Println(len(b))
+    fmt.Println(len(a + b))
+    fmt.Println(a[0])
+    fmt.Println(a[1])
+    fmt.Println(a[2])
+}
+</code></pre>
+
+<p>输出</p>
 
 <pre><code>3
 3
@@ -217,6 +236,6 @@ func main() {
 ./t.go:14: non-bool "" (type untyped string) used as if condition
 </code></pre>
 
-<p>上面介绍的是Go语言内置的基本数据类型。</p>
+<p>上面介绍的是Go语言内置的基础数据类型。</p>
 </body>
 </html>
