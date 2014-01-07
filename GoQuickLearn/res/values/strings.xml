@@ -9,6 +9,7 @@
     <string name="previous_chapter">上一节</string>
     <string name="next_chapter">下一节</string>
     <string name="logo_desc">Go轻松学</string>
+    <string name="version">版本: </string>
     <string name="publish_info">多科学堂出品</string>
     <string name="weixin">微信公众号</string>
     <string name="weixin_id">duokr_school</string>
