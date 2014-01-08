@@ -5,8 +5,8 @@ import android.view.GestureDetector.OnGestureListener;
 import android.view.MotionEvent;
 
 public class ContentViewGestureListener implements OnGestureListener {
-	private int FLING_MIN_DISTANCE = 10;
-	private int FLING_MIN_VELOCITY = 10;
+	private int FLING_MIN_DISTANCE = 180;
+	private int FLING_MIN_VELOCITY = 18;
 	private ContentViewActivity hostActivity;
 
 	public ContentViewGestureListener(ContentViewActivity hostActivity) {

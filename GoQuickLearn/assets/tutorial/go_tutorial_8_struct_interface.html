@@ -192,7 +192,7 @@ func main() {
 }
 </code></pre>
 
-<p>上面的例子中，使用了new函数来创建一个结构体指针rect，也就是说rect的类型是*Rect，结构体遇到指针的时候，你<code>不需要使用*去访问结构体的成员</code>，直接使用<code>.</code>引用就可以了。所以上面的例子中我们直接使用<code>rect.width=100</code> 和<code>`rect.length=200</code>来设置结构体成员值。因为这个时候rect是结构体指针，所以我们定义area()函数的时候结构体限定类型为<code>*Rect</code>。</p>
+<p>上面的例子中，使用了new函数来创建一个结构体指针rect，也就是说rect的类型是*Rect，结构体遇到指针的时候，你<code>不需要使用*去访问结构体的成员</code>，直接使用<code>.</code>引用就可以了。所以上面的例子中我们直接使用<code>rect.width=100</code> 和<code>rect.length=200</code>来设置结构体成员值。因为这个时候rect是结构体指针，所以我们定义area()函数的时候结构体限定类型为<code>*Rect</code>。</p>
 
 <p>其实在计算面积的这个例子中，我们不需要改变矩形的宽或者长度，所以定义area函数的时候结构体限定类型仍然为<code>Rect</code>也是可以的。如下：</p>
 
