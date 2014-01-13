@@ -21,6 +21,7 @@ import android.widget.TextView;
 public class ContentViewActivity extends Activity implements OnClickListener,
 		OnTouchListener {
 	private List<LearnContent> learnContentList;
+	private LearnContent currentLearnContent;
 	private TextView contentTitleTextView;
 	private WebView contentWebView;
 	private Button previousChapterButton;
@@ -43,6 +44,8 @@ public class ContentViewActivity extends Activity implements OnClickListener,
 		this.contentWebView.getSettings().setJavaScriptEnabled(true);
 		this.contentWebView.setOnTouchListener(this);
 		this.contentWebView.setLongClickable(true);
+		// fix the white background which switching
+		this.contentWebView.setBackgroundColor(0);
 		this.gestureListener = new ContentViewGestureListener(this);
 		this.gestureDector = new GestureDetector(
 				this.contentWebView.getContext(), this.gestureListener);
@@ -53,10 +56,30 @@ public class ContentViewActivity extends Activity implements OnClickListener,
 				.findViewById(R.id.nextChapterButton);
 
 		Intent intent = this.getIntent();
-		LearnContent learnContent = (LearnContent) intent
-				.getSerializableExtra("learnContent");
 		this.currentChapterIndex = intent.getIntExtra("learnContentIndex", -1);
-		this.displayCurrentChapter(learnContent);
+		this.currentLearnContent = (LearnContent) intent
+				.getSerializableExtra("learnContent");
+	}
+
+	@Override
+	protected void onSaveInstanceState(Bundle outState) {
+		outState.putInt("learnContentIndex", this.currentChapterIndex);
+		super.onSaveInstanceState(outState);
+	}
+
+	@Override
+	protected void onRestoreInstanceState(Bundle savedInstanceState) {
+		super.onRestoreInstanceState(savedInstanceState);
+		this.currentChapterIndex = savedInstanceState
+				.getInt("learnContentIndex");
+		this.currentLearnContent = this.learnContentList
+				.get(this.currentChapterIndex);
+	}
+
+	@Override
+	protected void onStart() {
+		super.onStart();
+		this.displayCurrentChapter(this.currentLearnContent);
 	}
 
 	public LearnContent getPreviousChapter() {
