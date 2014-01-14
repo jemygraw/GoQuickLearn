@@ -55,25 +55,24 @@ public class ContentViewActivity extends Activity implements OnClickListener,
 		this.nextChapterButton = (Button) this
 				.findViewById(R.id.nextChapterButton);
 
-		Intent intent = this.getIntent();
-		this.currentChapterIndex = intent.getIntExtra("learnContentIndex", -1);
-		this.currentLearnContent = (LearnContent) intent
-				.getSerializableExtra("learnContent");
+		if (savedInstanceState != null) {
+			this.currentChapterIndex = savedInstanceState
+					.getInt("learnContentIndex");
+			this.currentLearnContent = this.learnContentList
+					.get(this.currentChapterIndex);
+		} else {
+			Intent intent = this.getIntent();
+			this.currentChapterIndex = intent.getIntExtra("learnContentIndex",
+					-1);
+			this.currentLearnContent = (LearnContent) intent
+					.getSerializableExtra("learnContent");
+		}
 	}
 
 	@Override
 	protected void onSaveInstanceState(Bundle outState) {
 		outState.putInt("learnContentIndex", this.currentChapterIndex);
 		super.onSaveInstanceState(outState);
-	}
-
-	@Override
-	protected void onRestoreInstanceState(Bundle savedInstanceState) {
-		super.onRestoreInstanceState(savedInstanceState);
-		this.currentChapterIndex = savedInstanceState
-				.getInt("learnContentIndex");
-		this.currentLearnContent = this.learnContentList
-				.get(this.currentChapterIndex);
 	}
 
 	@Override
