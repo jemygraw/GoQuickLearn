@@ -28,3 +28,7 @@ proguard/
 *.iws
 .idea/
 
+GoQuickLearn/proguard_logs/dump.txt
+GoQuickLearn/proguard_logs/mapping.txt
+GoQuickLearn/proguard_logs/seeds.txt
+GoQuickLearn/proguard_logs/usage.txt

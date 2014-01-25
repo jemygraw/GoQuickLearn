@@ -1,64 +1,17 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".ContentViewActivity" >
-
-    <RelativeLayout
-        android:id="@+id/contentNavLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:background="@color/top_nav_bg_color"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:paddingBottom="@dimen/elem_padding_bottom"
-        android:paddingLeft="@dimen/elem_padding_left"
-        android:paddingRight="@dimen/elem_padding_right"
-        android:paddingTop="@dimen/elem_padding_top" >
-
-        <Button
-            android:id="@+id/previousChapterButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:background="@color/prev_next_btn_bg_color"
-            android:text="@string/previous_chapter"
-            android:textColor="@color/prev_next_btn_fg_color" />
-
-        <TextView
-            android:id="@+id/contentTitleTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:text="@string/app_main_title"
-            android:textAlignment="center"
-            android:textColor="@color/top_nav_title_color"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/nextChapterButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="@color/prev_next_btn_bg_color"
-            android:text="@string/next_chapter"
-            android:textColor="@color/prev_next_btn_fg_color" />
-    </RelativeLayout>
+    android:orientation="vertical"
+    tools:context=".ContentViewActivity">
 
     <WebView
         android:id="@+id/contentWebView"
         android:layerType="software"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/contentNavLayout"
+        android:layout_weight="1"
         android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp" >
+        android:layout_marginTop="0dp">
     </WebView>
-
-</RelativeLayout>
+</LinearLayout>

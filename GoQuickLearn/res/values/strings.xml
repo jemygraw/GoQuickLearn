@@ -2,10 +2,13 @@
 <resources>
 
     <string name="app_name">Go轻松学</string>
-    <string name="app_main_title">内容</string>
-    <string name="activity_content_view_title">内容</string>
+    <string name="app_main_title">目录</string>
+    <string name="activity_content_view_title"></string>
     <string name="activity_about_title">关于</string>
     <string name="app_about">关于Go轻松学</string>
+    <string name="no_previous_chapter_tip">前面没有了哦!</string>
+    <string name="no_next_chapter_tip">这是最后一节啦!</string>
+    <string name="chapter_switch_tip">手指左滑或者右滑切换章节哦:-P</string>
     <string name="previous_chapter">上一节</string>
     <string name="next_chapter">下一节</string>
     <string name="logo_desc">Go轻松学</string>
