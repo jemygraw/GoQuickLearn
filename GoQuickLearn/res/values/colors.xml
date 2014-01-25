@@ -1,9 +1,7 @@
 <resources>
-
-    <color name="prev_next_btn_bg_color">#2771a6</color>
-    <color name="prev_next_btn_fg_color">#fff</color>
-    <color name="top_nav_title_color">#fff</color>
-    <color name="top_nav_bg_color">#dadbda</color>
     <color name="about_bg">#eee</color>
     <color name="about_blue">#0099cc</color>
+    <color name="white">#fff</color>
+    <color name="activity_bg_color">#ccc</color>
+    <color name="actionbar_bg_color">#33b5e5</color>
 </resources>

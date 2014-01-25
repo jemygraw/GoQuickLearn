@@ -1,120 +1,102 @@
 package net.duokr.goquicklearn.activity;
 
-import java.util.List;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.ViewPager;
+import android.widget.Toast;
 
 import net.duokr.goquicklearn.R;
 import net.duokr.goquicklearn.config.LearnContent;
 import net.duokr.goquicklearn.config.LearnContentLoader;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.Bundle;
-import android.view.GestureDetector;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.View.OnTouchListener;
-import android.webkit.WebView;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
+import java.util.List;
 
-public class ContentViewActivity extends Activity implements
-        OnTouchListener {
-    private List<LearnContent> learnContentList;
-    private LearnContent currentLearnContent;
-    private WebView contentWebView;
-    private Button previousChapterButton;
-    private Button nextChapterButton;
-    private int currentChapterIndex;
-    private ContentViewGestureListener gestureListener;
-    private GestureDetector gestureDector;
-    private boolean showTip;
-    @SuppressLint("SetJavaScriptEnabled")
+public class ContentViewActivity extends FragmentActivity implements ViewPager.OnPageChangeListener
+
+{
+    private ViewPager contentViewPager;
+    private ContentSlidePagerAdapter contentPagerAdapter;
+    private int currentContentIndex = -1;
+    private boolean showTip = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_content_view_layout);
 
-        this.learnContentList = LearnContentLoader.loadLearnContentList(this);
-
-        this.contentWebView = (WebView) this.findViewById(R.id.contentWebView);
-        this.contentWebView.getSettings().setJavaScriptEnabled(true);
-        this.contentWebView.setOnTouchListener(this);
-        this.contentWebView.setLongClickable(true);
-        // fix the white background which switching
-        this.contentWebView.setBackgroundColor(0);
-        this.gestureListener = new ContentViewGestureListener(this);
-        this.gestureDector = new GestureDetector(
-                this.contentWebView.getContext(), this.gestureListener);
-
+        this.contentViewPager = (ViewPager) this.findViewById(R.id.contentViewPager);
+        List<LearnContent> learnContentList = LearnContentLoader.loadLearnContentList(this);
         if (savedInstanceState != null) {
-            this.currentChapterIndex = savedInstanceState
+            this.currentContentIndex = savedInstanceState
                     .getInt("learnContentIndex");
-            this.currentLearnContent = this.learnContentList
-                    .get(this.currentChapterIndex);
         } else {
             Intent intent = this.getIntent();
-            this.currentChapterIndex = intent.getIntExtra("learnContentIndex",
-                    -1);
-            this.currentLearnContent = (LearnContent) intent
-                    .getSerializableExtra("learnContent");
+            if (intent != null) {
+                this.currentContentIndex = intent.getIntExtra("learnContentIndex",
+                        -1);
+            }
         }
-        SharedPreferences pref=this.getSharedPreferences("preference_file",Context.MODE_PRIVATE);
-        SharedPreferences.Editor prefEditor=pref.edit();
-        showTip=pref.getBoolean("showTip",true);
-        if(showTip){
-            Toast.makeText(this,R.string.chapter_switch_tip,Toast.LENGTH_LONG).show();
-            showTip=false;
-            prefEditor.putBoolean("showTip",showTip);
-            prefEditor.commit();
+        this.contentPagerAdapter = new ContentSlidePagerAdapter(getSupportFragmentManager(), learnContentList);
+        this.contentViewPager.setAdapter(this.contentPagerAdapter);
+        if (this.currentContentIndex != -1) {
+            this.contentViewPager.setCurrentItem(this.currentContentIndex);
+            this.setTitle(this.contentPagerAdapter.getPageTitle(this.currentContentIndex));
+        }
+        this.contentViewPager.setOnPageChangeListener(this);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (this.contentViewPager.getCurrentItem() == 0) {
+            super.onBackPressed();
+        } else {
+            this.contentViewPager.setCurrentItem(this.contentViewPager.getCurrentItem() - 1);
         }
     }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
-        outState.putInt("learnContentIndex", this.currentChapterIndex);
+        outState.putInt("learnContentIndex", this.contentViewPager.getCurrentItem());
         super.onSaveInstanceState(outState);
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
-        this.displayCurrentChapter(this.currentLearnContent);
-    }
+    public void onPageScrolled(int i, float v, int i2) {
 
-    public LearnContent getPreviousChapter() {
-        LearnContent learnContent = null;
-        if (this.currentChapterIndex - 1 >= 0) {
-            learnContent = this.learnContentList
-                    .get(this.currentChapterIndex - 1);
-            this.currentChapterIndex--;
-        }
-        return learnContent;
-    }
-
-    public LearnContent getNextChapter() {
-        LearnContent learnContent = null;
-        if (this.currentChapterIndex + 1 < this.learnContentList.size()) {
-            learnContent = this.learnContentList
-                    .get(this.currentChapterIndex + 1);
-            this.currentChapterIndex++;
-        }
-        return learnContent;
-    }
-
-    public void displayCurrentChapter(LearnContent learnContent) {
-        this.setTitle(learnContent.getContentName());
-        this.contentWebView.loadUrl("file:///android_asset/tutorial/"
-                + learnContent.getChapter());
     }
 
     @Override
-    public boolean onTouch(View view, MotionEvent event) {
-        return this.gestureDector.onTouchEvent(event);
+    public void onPageSelected(int i) {
+        this.setTitle(this.contentPagerAdapter.getPageTitle(i));
     }
+
+    /**
+     * Sequence
+     * 1 - scrolling
+     * 2 - scrolled
+     * 0 - do nothing
+     */
+    @Override
+    public void onPageScrollStateChanged(int status) {
+        if (status == 1) {
+            int currentContentIndex = this.contentViewPager.getCurrentItem();
+            if (currentContentIndex == 0 || currentContentIndex == this.contentPagerAdapter.getCount() - 1) {
+                showTip = true;
+            }
+        }
+        else if (status == 0) {
+            int currentContentIndex = this.contentViewPager.getCurrentItem();
+            if (showTip) {
+                if (currentContentIndex == 0) {
+                    Toast.makeText(this, R.string.no_previous_chapter_tip, Toast.LENGTH_SHORT).show();
+                } else if (currentContentIndex == this.contentPagerAdapter.getCount() - 1) {
+                    Toast.makeText(this, R.string.no_next_chapter_tip, Toast.LENGTH_SHORT).show();
+                }
+                showTip = false;
+            }
+        }
+    }
+
 
 }

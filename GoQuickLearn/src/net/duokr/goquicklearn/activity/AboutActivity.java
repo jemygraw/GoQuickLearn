@@ -1,12 +1,12 @@
 package net.duokr.goquicklearn.activity;
 
-import net.duokr.goquicklearn.R;
-
-import android.os.Bundle;
-import android.widget.TextView;
 import android.app.Activity;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.os.Bundle;
+import android.widget.TextView;
+
+import net.duokr.goquicklearn.R;
 
 public class AboutActivity extends Activity {
 

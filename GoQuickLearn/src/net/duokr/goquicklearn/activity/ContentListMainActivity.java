@@ -1,19 +1,8 @@
 package net.duokr.goquicklearn.activity;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import net.duokr.goquicklearn.R;
-import net.duokr.goquicklearn.config.LearnContent;
-import net.duokr.goquicklearn.config.LearnContentLoader;
-
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,11 +12,22 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
+import net.duokr.goquicklearn.R;
+import net.duokr.goquicklearn.config.LearnContent;
+import net.duokr.goquicklearn.config.LearnContentLoader;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class ContentListMainActivity extends Activity implements
         OnItemClickListener {
     private List<LearnContent> learnContentList;
     private String CONTENT_NAME = "contentName";
     private String CONTENT_ABSTRACT = "contentAbstract";
+    private Intent contentViewIntent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,17 +63,15 @@ public class ContentListMainActivity extends Activity implements
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position,
                             long id) {
-        LearnContent learnContent = this.learnContentList.get(position);
-        if (learnContent != null) {
-            Intent intent = new Intent(ContentListMainActivity.this,
+        if (this.contentViewIntent == null) {
+            this.contentViewIntent = new Intent(ContentListMainActivity.this,
                     ContentViewActivity.class);
-            Bundle bundleData = new Bundle();
-            bundleData.putSerializable("learnContent", learnContent);
-            bundleData.putInt("learnContentIndex", position);
-            intent.putExtras(bundleData);
-            this.startActivity(intent);
-
         }
+        Bundle bundleData = new Bundle();
+        bundleData.putInt("learnContentIndex", position);
+        this.contentViewIntent.putExtras(bundleData);
+
+        this.startActivity(this.contentViewIntent);
     }
 
     @Override
