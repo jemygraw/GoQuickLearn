@@ -1,9 +1,16 @@
 package net.duokr.goquicklearn.activity;
 
-import android.app.Activity;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import net.duokr.goquicklearn.R;
+import net.duokr.goquicklearn.config.LearnContent;
+import net.duokr.goquicklearn.config.LearnContentLoader;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,16 +19,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
-import net.duokr.goquicklearn.R;
-import net.duokr.goquicklearn.config.LearnContent;
-import net.duokr.goquicklearn.config.LearnContentLoader;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-public class ContentListMainActivity extends Activity implements
+public class ContentListMainActivity extends ActionBarActivity implements
         OnItemClickListener {
     private List<LearnContent> learnContentList;
     private String CONTENT_NAME = "contentName";
@@ -78,7 +76,6 @@ public class ContentListMainActivity extends Activity implements
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                NavUtils.navigateUpFromSameTask(this);
                 return true;
             case R.id.app_about_menu_item:
                 Intent intent = new Intent(ContentListMainActivity.this,

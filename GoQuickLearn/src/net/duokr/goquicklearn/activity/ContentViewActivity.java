@@ -1,9 +1,12 @@
 package net.duokr.goquicklearn.activity;
 
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import net.duokr.goquicklearn.R;
@@ -12,9 +15,7 @@ import net.duokr.goquicklearn.config.LearnContentLoader;
 
 import java.util.List;
 
-public class ContentViewActivity extends FragmentActivity implements ViewPager.OnPageChangeListener
-
-{
+public class ContentViewActivity extends ActionBarActivity implements ViewPager.OnPageChangeListener {
     private ViewPager contentViewPager;
     private ContentSlidePagerAdapter contentPagerAdapter;
     private int currentContentIndex = -1;
@@ -44,6 +45,20 @@ public class ContentViewActivity extends FragmentActivity implements ViewPager.O
             this.setTitle(this.contentPagerAdapter.getPageTitle(this.currentContentIndex));
         }
         this.contentViewPager.setOnPageChangeListener(this);
+
+        //set action bar behavior
+        ActionBar actionBar = this.getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -84,8 +99,7 @@ public class ContentViewActivity extends FragmentActivity implements ViewPager.O
             if (currentContentIndex == 0 || currentContentIndex == this.contentPagerAdapter.getCount() - 1) {
                 showTip = true;
             }
-        }
-        else if (status == 0) {
+        } else if (status == 0) {
             int currentContentIndex = this.contentViewPager.getCurrentItem();
             if (showTip) {
                 if (currentContentIndex == 0) {

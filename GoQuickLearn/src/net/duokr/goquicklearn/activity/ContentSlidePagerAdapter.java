@@ -1,15 +1,12 @@
 package net.duokr.goquicklearn.activity;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import net.duokr.goquicklearn.config.LearnContent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.view.ViewGroup;
-
-import net.duokr.goquicklearn.config.LearnContent;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by jemy on 1/25/14.

@@ -1,9 +1,18 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
 
     <item
-        android:id="@+id/app_about_menu_item"
-        android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/app_about" />
+        android:id="@+id/popupMenu"
+        android:icon="@drawable/ic_action_overflow"
+        android:title=""
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/app_about_menu_item"
+                android:orderInCategory="100"
+                android:title="@string/app_about"
+                app:showAsAction="never"/>
+        </menu>
+    </item>
 
 </menu>
