@@ -96,7 +96,7 @@ func main() {
 <ol>
 <li>x_ptr 是一个<code>指针变量</code>，它<code>指向(存储)x的地址</code>；</li>
 <li>&amp;x_ptr 是<code>取这个指针变量x_ptr的地址</code>，这里可以设想<code>有另一个指针变量x_ptr_ptr(指向)存储</code>这个<code>x_ptr指针的地址</code>；</li>
-<li>*&amp;x_ptr 等价于<code>\*x_ptr_ptr</code>就是<code>取这个x_ptr_ptr指针变量</code>所<code>指向(存储)</code>的<code>地址所对应的变量的值</code> ，也就是<code>x_ptr的值</code>，也就是<code>指针变量x_ptr指向(存储)的地址</code>，也就是<code>x的地址</code>。 这里可以看到，其实<code>*&amp;</code>这两个运算符在一起就相互抵消作用了。</li>
+<li>*&amp;x_ptr 等价于<code>*x_ptr_ptr</code>就是<code>取这个x_ptr_ptr指针变量</code>所<code>指向(存储)</code>的<code>地址所对应的变量的值</code> ，也就是<code>x_ptr的值</code>，也就是<code>指针变量x_ptr指向(存储)的地址</code>，也就是<code>x的地址</code>。 这里可以看到，其实<code>*&amp;</code>这两个运算符在一起就相互抵消作用了。</li>
 </ol>
 
 
