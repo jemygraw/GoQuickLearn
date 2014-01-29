@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<GoQuickLearn>
+    <ContentList>
+        <Content>
+            <Name>122222222222222222</Name>
+            <Abstract>轻松友好的安装方式，多平台支持。</Abstract>
+            <Chapter>1.html</Chapter>
+        </Content>
+
+        <Content>
+            <Name>33333333333333</Name>
+            <Abstract>认识Go提供的清晰的数据类型，很清晰，不骗你。</Abstract>
+            <Chapter>2.html</Chapter>
+        </Content>
+
+        <Content>
+            <Name>444444444444</Name>
+            <Abstract>学语言绕不开的变量，当然Go是静态语言，变量都是有固定类型的，程序运行过程中无法改变变量类型。</Abstract>
+            <Chapter>3.html</Chapter>
+        </Content>
+
+         
+    </ContentList>
+</GoQuickLearn>

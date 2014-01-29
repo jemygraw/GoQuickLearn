@@ -33,7 +33,7 @@ public class ContentSlidePageFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.content_fragment_slide_page, container, false);
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_content_slide_page, container, false);
 
         if (savedInstanceState != null) {
             this.learnContent = (LearnContent) savedInstanceState.getSerializable("learnContent");
