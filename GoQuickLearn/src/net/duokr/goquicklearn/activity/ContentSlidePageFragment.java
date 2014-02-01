@@ -1,5 +1,6 @@
 package net.duokr.goquicklearn.activity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -31,7 +32,8 @@ public class ContentSlidePageFragment extends Fragment {
         super.onSaveInstanceState(outState);
     }
 
-    @Override
+    @SuppressLint("SetJavaScriptEnabled")
+	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_content_slide_page, container, false);
 
@@ -40,6 +42,7 @@ public class ContentSlidePageFragment extends Fragment {
         }
         this.contentWebView = (WebView) rootView.findViewById(R.id.contentWebView);
         this.contentWebView.getSettings().setJavaScriptEnabled(true);
+        this.contentWebView.getSettings().setBuiltInZoomControls(true);
         this.contentWebView.setLongClickable(true);
         // fix the white background which switching
         this.contentWebView.setBackgroundColor(0);
