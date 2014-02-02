@@ -34,19 +34,25 @@ public class ContentSlidePageFragment extends Fragment {
 		super.onSaveInstanceState(outState);
 	}
 
-	@SuppressLint("SetJavaScriptEnabled")
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		ViewGroup rootView = (ViewGroup) inflater.inflate(
 				R.layout.fragment_content_slide_page, container, false);
 
+		return rootView;
+	}
+
+	@SuppressLint("SetJavaScriptEnabled")
+	@Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
 		if (savedInstanceState != null) {
 			this.learnContent = (LearnContent) savedInstanceState
 					.getSerializable("learnContent");
 		}
-		this.contentWebView = (WebView) rootView
-				.findViewById(R.id.contentWebView);
+		this.contentWebView = (WebView) this.getView().findViewById(
+				R.id.contentWebView);
 		this.contentWebView.getSettings().setJavaScriptEnabled(true);
 		this.contentWebView.getSettings().setBuiltInZoomControls(true);
 		this.contentWebView.setLongClickable(true);
@@ -74,9 +80,10 @@ public class ContentSlidePageFragment extends Fragment {
 		});
 		// fix the white background which switching
 		this.contentWebView.setBackgroundColor(0);
+
 		this.contentWebView.loadUrl("file:///android_asset/tutorial/"
 				+ learnContent.getChapter());
-		return rootView;
+
 	}
 
 	public LearnContent getLearnContent() {
