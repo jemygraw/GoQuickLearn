@@ -4,8 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ContentViewActivity"
-    android:paddingTop="@dimen/elem_padding_top"
-    android:paddingBottom="@dimen/elem_padding_bottom"
     android:paddingLeft="@dimen/elem_padding_left"
     android:paddingRight="@dimen/elem_padding_right"
     android:background="@color/activity_bg_color">
