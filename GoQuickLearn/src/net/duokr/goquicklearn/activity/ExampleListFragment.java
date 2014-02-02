@@ -54,8 +54,9 @@ public class ExampleListFragment extends ListFragment {
 
 		SimpleAdapter contentSimpleAdapter = new SimpleAdapter(
 				this.getActivity(), listItems,
-				R.layout.meta_lesson_list_item_layout,
-				new String[] { CONTENT_NAME ,CONTENT_ABSTRACT}, new int[] { R.id.contentName,R.id.contentAbstract });
+				R.layout.meta_lesson_list_item_layout, new String[] {
+						CONTENT_NAME, CONTENT_ABSTRACT }, new int[] {
+						R.id.contentName, R.id.contentAbstract });
 
 		ListView contentListView = (ListView) this.getView().findViewById(
 				android.R.id.list);

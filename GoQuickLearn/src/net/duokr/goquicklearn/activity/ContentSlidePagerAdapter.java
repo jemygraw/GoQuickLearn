@@ -12,33 +12,34 @@ import android.support.v4.app.FragmentPagerAdapter;
  * Created by jemy on 1/25/14.
  */
 public class ContentSlidePagerAdapter extends FragmentPagerAdapter {
-    private int contentListSize;
-    private List<ContentSlidePageFragment> contentFragmentList;
-    public ContentSlidePagerAdapter(FragmentManager fm, List<LearnContent> learnContentList){
-        super(fm);
-        this.contentFragmentList=new ArrayList<ContentSlidePageFragment>();
-        this.contentListSize=learnContentList.size();
-        for(LearnContent learnContent : learnContentList){
-            ContentSlidePageFragment fragment=new ContentSlidePageFragment();
-            fragment.setLearnContent(learnContent);
-            this.contentFragmentList.add(fragment);
-        }
-    }
+	private int contentListSize;
+	private List<ContentSlidePageFragment> contentFragmentList;
 
-    @Override
-    public Fragment getItem(int position){
-        return this.contentFragmentList.get(position);
-    }
+	public ContentSlidePagerAdapter(FragmentManager fm,
+			List<LearnContent> learnContentList) {
+		super(fm);
+		this.contentFragmentList = new ArrayList<ContentSlidePageFragment>();
+		this.contentListSize = learnContentList.size();
+		for (LearnContent learnContent : learnContentList) {
+			ContentSlidePageFragment fragment = new ContentSlidePageFragment();
+			fragment.setLearnContent(learnContent);
+			this.contentFragmentList.add(fragment);
+		}
+	}
 
-    @Override
-    public int getCount(){
-        return this.contentListSize;
-    }
+	@Override
+	public Fragment getItem(int position) {
+		return this.contentFragmentList.get(position);
+	}
 
-    @Override
-    public CharSequence getPageTitle(int position) {
-        return this.contentFragmentList.get(position).getLearnContent().getContentName();
-    }
+	@Override
+	public int getCount() {
+		return this.contentListSize;
+	}
+
+	@Override
+	public CharSequence getPageTitle(int position) {
+		return this.contentFragmentList.get(position).getLearnContent()
+				.getContentName();
+	}
 }
-
-
