@@ -97,7 +97,7 @@ public class CourseListMainActivity extends ActionBarActivity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.content_list_main, menu);
+		getMenuInflater().inflate(R.menu.menu_course_list_main, menu);
 		return super.onCreateOptionsMenu(menu);
 	}
 
