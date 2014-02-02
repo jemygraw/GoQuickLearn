@@ -53,18 +53,22 @@ public class ContentSlidePageFragment extends Fragment {
 		this.contentWebView.setWebViewClient(new WebViewClient() {
 			@Override
 			public void onPageStarted(WebView view, String url, Bitmap favicon) {
-				super.onPageStarted(view, url, favicon);
-				((ProgressBar) getActivity().findViewById(
-						R.id.contentLoadingProgressBar))
-						.setVisibility(ProgressBar.VISIBLE);
+				try {
+					((ProgressBar) getActivity().findViewById(
+							R.id.contentLoadingProgressBar))
+							.setVisibility(ProgressBar.VISIBLE);
+				} catch (Exception ex) {
+				}
 			}
 
 			@Override
 			public void onPageFinished(WebView view, String url) {
-				super.onPageFinished(view, url);
-				((ProgressBar) getActivity().findViewById(
-						R.id.contentLoadingProgressBar))
-						.setVisibility(ProgressBar.INVISIBLE);
+				try {
+					((ProgressBar) getActivity().findViewById(
+							R.id.contentLoadingProgressBar))
+							.setVisibility(ProgressBar.INVISIBLE);
+				} catch (Exception ex) {
+				}
 			}
 
 		});
