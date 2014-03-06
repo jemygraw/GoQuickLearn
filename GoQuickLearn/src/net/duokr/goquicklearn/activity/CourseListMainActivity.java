@@ -107,9 +107,14 @@ public class CourseListMainActivity extends ActionBarActivity {
 		case android.R.id.home:
 			return true;
 		case R.id.app_about_menu_item:
-			Intent intent = new Intent(CourseListMainActivity.this,
+			Intent intent1 = new Intent(CourseListMainActivity.this,
 					AboutActivity.class);
-			this.startActivity(intent);
+			this.startActivity(intent1);
+			return true;
+		case R.id.app_my_profile_menu_item:
+			Intent intent2 = new Intent(CourseListMainActivity.this,
+					MyProfileActivity.class);
+			this.startActivity(intent2);
 			return true;
 		}
 		return super.onOptionsItemSelected(item);

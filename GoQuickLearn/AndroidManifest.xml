@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.duokr.goquicklearn"
     android:versionCode="7"
-    android:versionName="2.2">
+    android:versionName="2.2" >
 
     <uses-sdk
         android:minSdkVersion="7"
@@ -12,10 +12,10 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.AppCompat.Light">
+        android:theme="@style/Theme.AppCompat.Light" >
         <activity
             android:name="net.duokr.goquicklearn.activity.CourseListMainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,7 +25,7 @@
         <activity
             android:name="net.duokr.goquicklearn.activity.ContentViewActivity"
             android:label="@string/activity_content_view_title"
-            android:parentActivityName="net.duokr.goquicklearn.activity.CourseListMainActivity">
+            android:parentActivityName="net.duokr.goquicklearn.activity.CourseListMainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="net.duokr.goquicklearn.activity.CourseListMainActivity" />
@@ -33,10 +33,18 @@
         <activity
             android:name="net.duokr.goquicklearn.activity.AboutActivity"
             android:label="@string/activity_about_title"
-            android:parentActivityName="net.duokr.goquicklearn.activity.CourseListMainActivity">
+            android:parentActivityName="net.duokr.goquicklearn.activity.CourseListMainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="net.duokr.goquicklearn.activity.CourseListMainActivity" />
+        </activity>
+        <activity
+            android:name="net.duokr.goquicklearn.activity.MyProfileActivity"
+            android:label="@string/my_profile"
+            android:parentActivityName="net.duokr.androidlearn.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.duokr.androidlearn.MainActivity" />
         </activity>
     </application>
 

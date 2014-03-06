@@ -2,6 +2,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto" >
 
     <item
+        android:id="@+id/app_my_profile_menu_item"
+        android:icon="@drawable/ic_action_person"
+        android:title="@string/my_profile"
+        app:showAsAction="always"/>
+    <item
         android:id="@+id/popupMenu"
         android:icon="@drawable/ic_action_overflow"
         android:title=""
