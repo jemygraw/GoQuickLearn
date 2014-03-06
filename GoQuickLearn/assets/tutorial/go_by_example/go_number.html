@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<link rel="stylesheet" href="default.css">
+<script src="highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<title>Go 数值</title>
+</head>
+<body>
+<p>Go有很多种数据类型，包括字符串类型，整型，浮点型，布尔型等等，这里有几个基础的例子。</p>
+<pre><code>package main
+
+import "fmt"
+
+func main() {
+
+    // 字符串可以使用"+"连接
+    fmt.Println("go" + "lang")
+
+    //整型和浮点型
+    fmt.Println("1+1 =", 1+1)
+    fmt.Println("7.0/3.0 =", 7.0/3.0)
+
+    // 布尔型的几种操作符
+    fmt.Println(true &amp;&amp; false)
+    fmt.Println(true || false)
+    fmt.Println(!true)
+}
+</code></pre>
+<p>输出结果为</p>
+<pre><code>golang
+1+1 = 2
+7.0/3.0 = 2.3333333333333335
+false
+true
+false
+</code></pre></body>
+</html>

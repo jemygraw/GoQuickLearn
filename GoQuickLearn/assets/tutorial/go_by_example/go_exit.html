@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<link rel="stylesheet" href="default.css">
+<script src="highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<title>Go Exit</title>
+</head>
+<body>
+<p>使用<code>os.Exit</code>可以给定一个状态，然后立刻退出程序运行。</p>
+<pre><code>package main
+
+import "fmt"
+import "os"
+
+func main() {
+    // 当使用`os.Exit`的时候defer操作不会被运行，
+    // 所以这里的``fmt.Println`将不会被调用
+    defer fmt.Println("!")
+
+    // 退出程序并设置退出状态值
+    os.Exit(3)
+}
+</code></pre>
+<p>注意，Go和C语言不同，main函数并不返回一个整数来表示程序的退出状态，而是将退出状态作为<code>os.Exit</code>函数的参数。</p>
+<p>如果你使用<code>go run</code>来运行程序，将会有如下输出</p>
+<pre><code>exit status 3
+</code></pre>
+<p>如果你使用<code>go build</code>先编译程序，然后再运行可执行文件，程序将不会有输出。
+如果你想查看程序的返回值，*nix系列系统下面使用如下方法:</p>
+<pre><code>$ ./go_exit
+$ echo $?
+3
+</code></pre></body>
+</html>

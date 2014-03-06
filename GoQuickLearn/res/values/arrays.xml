@@ -3,7 +3,7 @@
 
     <string-array name="course_name_list">
         <item>Go轻松学-基础</item>
-        <item>Go轻松学-实例</item>
+        <item>Go轻松学-示例</item>
     </string-array>
 
 </resources>
