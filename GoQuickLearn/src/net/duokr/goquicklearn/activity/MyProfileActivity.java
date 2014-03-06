@@ -2,7 +2,6 @@ package net.duokr.goquicklearn.activity;
 
 import net.duokr.goquicklearn.R;
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
@@ -31,7 +30,7 @@ public class MyProfileActivity extends ActionBarActivity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case android.R.id.home:
-			NavUtils.navigateUpFromSameTask(this);
+			super.onBackPressed();
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
