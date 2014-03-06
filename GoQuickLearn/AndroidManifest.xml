@@ -41,10 +41,10 @@
         <activity
             android:name="net.duokr.goquicklearn.activity.MyProfileActivity"
             android:label="@string/my_profile"
-            android:parentActivityName="net.duokr.androidlearn.MainActivity" >
+            android:parentActivityName="net.duokr.goquicklearn.activity.CourseListMainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="net.duokr.androidlearn.MainActivity" />
+                android:value="net.duokr.goquicklearn.activity.CourseListMainActivity" />
         </activity>
     </application>
 

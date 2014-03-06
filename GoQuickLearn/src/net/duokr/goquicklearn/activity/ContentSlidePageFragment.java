@@ -54,7 +54,8 @@ public class ContentSlidePageFragment extends Fragment {
 		this.contentWebView = (WebView) this.getView().findViewById(
 				R.id.contentWebView);
 		this.contentWebView.getSettings().setJavaScriptEnabled(true);
-		this.contentWebView.getSettings().setBuiltInZoomControls(true);
+		//disable this according to @skey and @itfanr
+		//this.contentWebView.getSettings().setBuiltInZoomControls(true);
 		this.contentWebView.setLongClickable(true);
 		this.contentWebView.setWebViewClient(new WebViewClient() {
 			@Override
