@@ -22,8 +22,11 @@
     <string name="feedback_email_address">duokr.school@gmail.com</string>
     <string name="go_lang_group">Go友团</string>
     <string name="go_lang_group_link">http://baoz.me/#!/Go友团</string>
-    <string name="donate_info">如果你非常喜欢该应用，你可以为它支付你认可的价值金额。感谢支持 :-P！</string>
+    <string name="donate_info">赞助开发更多App :-P!</string>
     <string name="donate_address">https://me.alipay.com/jemygraw</string>
     <string name="my_profile">个人简历</string>
+    <string name="more_menu_item">更多</string>
+    <string name="github">Github</string>
+    <string name="github_address">https://github.com/jemygraw</string>
 
 </resources>

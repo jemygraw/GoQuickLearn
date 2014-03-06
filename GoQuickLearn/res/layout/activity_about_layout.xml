@@ -8,17 +8,17 @@
     android:gravity="center"
     tools:context=".AboutActivity" >
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:gravity="center" >
+        android:orientation="vertical"
+        android:gravity="center">
 
         <TextView
             android:id="@+id/publish_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:text="@string/publish_info"
             android:textAlignment="center"
@@ -30,9 +30,7 @@
             android:id="@+id/versionNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/publish_info"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:text="@string/version"
             android:textAlignment="center"
             android:textStyle="bold" />
@@ -41,9 +39,7 @@
             android:id="@+id/weixin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/versionNumber"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:text="@string/weixin"
             android:textAlignment="center"
             android:textStyle="bold" />
@@ -52,8 +48,6 @@
             android:id="@+id/weixin_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/weixin"
-            android:layout_centerHorizontal="true"
             android:text="@string/weixin_id"
             android:textAlignment="center" />
 
@@ -61,9 +55,7 @@
             android:id="@+id/qq_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/weixin_id"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:text="@string/qq_group"
             android:textAlignment="center"
             android:textStyle="bold" />
@@ -72,8 +64,6 @@
             android:id="@+id/qq_group_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/qq_group"
-            android:layout_centerHorizontal="true"
             android:text="@string/qq_group_id"
             android:textAlignment="center" />
 
@@ -81,9 +71,7 @@
             android:id="@+id/feedback_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/qq_group_id"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:text="@string/feedback_email"
             android:textAlignment="center"
             android:textStyle="bold" />
@@ -92,8 +80,6 @@
             android:id="@+id/feedback_email_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/feedback_email"
-            android:layout_centerHorizontal="true"
             android:autoLink="email"
             android:text="@string/feedback_email_address"
             android:textAlignment="center" />
@@ -102,9 +88,7 @@
             android:id="@+id/go_lang_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/feedback_email_address"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:text="@string/go_lang_group"
             android:textAlignment="center"
             android:textStyle="bold" />
@@ -113,20 +97,32 @@
             android:id="@+id/go_lang_group_link"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/go_lang_group"
-            android:layout_centerHorizontal="true"
             android:autoLink="web"
             android:text="@string/go_lang_group_link"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/github_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/github"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/github_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:text="@string/github_address"
             android:textAlignment="center" />
 
         <TextView
             android:id="@+id/donate_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/donate_address"
-            android:layout_alignRight="@+id/donate_address"
-            android:layout_below="@+id/go_lang_group_link"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:text="@string/donate_info"
             android:textAlignment="center"
             android:textStyle="bold" />
@@ -135,11 +131,9 @@
             android:id="@+id/donate_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/donate_info"
-            android:layout_centerHorizontal="true"
             android:autoLink="web"
             android:text="@string/donate_address"
             android:textAlignment="center" />
-    </RelativeLayout>
+    </LinearLayout>
 
 </ScrollView>
