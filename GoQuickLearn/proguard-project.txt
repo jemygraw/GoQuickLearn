@@ -18,3 +18,7 @@
 -keepclassmembers class net.duokr.goquicklearn.activity.ContentViewActivity{
    public *;
 }
+-dontwarn net.youmi.android.**
+-keep class net.youmi.android.** {
+    *;  
+}  
