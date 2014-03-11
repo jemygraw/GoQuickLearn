@@ -54,7 +54,7 @@ public class CourseListMainActivity extends ActionBarActivity {
 		if (YoumiAdConfig.YOUMI_AD_ENABLED) {
 			AdManager.getInstance(this).init(YoumiAdConfig.APP_ID,
 					YoumiAdConfig.APP_KEY, false);
-			// AdManager.getInstance(this).setEnableDebugLog(false);
+			AdManager.getInstance(this).setEnableDebugLog(false);
 			LinearLayout adLayout = (LinearLayout) findViewById(R.id.adLayoutMain);
 			AdView adView = new AdView(this, AdSize.FIT_SCREEN);
 			adLayout.addView(adView);
