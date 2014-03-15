@@ -1,11 +1,6 @@
 package net.duokr.goquicklearn.activity;
 
 import net.duokr.goquicklearn.R;
-import net.duokr.goquicklearn.config.YoumiAdConfig;
-import net.youmi.android.AdManager;
-import net.youmi.android.banner.AdSize;
-import net.youmi.android.banner.AdView;
-import net.youmi.android.smart.SmartBannerManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -14,7 +9,6 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
 import android.widget.SpinnerAdapter;
 
 public class CourseListMainActivity extends ActionBarActivity {
@@ -50,17 +44,6 @@ public class CourseListMainActivity extends ActionBarActivity {
 			this.currentNavIndex = savedInstanceState.getInt("navIndex");
 		}
 		this.actionBar.setSelectedNavigationItem(this.currentNavIndex);
-
-		if (YoumiAdConfig.YOUMI_AD_ENABLED) {
-			AdManager.getInstance(this).init(YoumiAdConfig.APP_ID,
-					YoumiAdConfig.APP_KEY, false);
-			AdManager.getInstance(this).setEnableDebugLog(false);
-			LinearLayout adLayout = (LinearLayout) findViewById(R.id.adLayoutMain);
-			AdView adView = new AdView(this, AdSize.FIT_SCREEN);
-			adLayout.addView(adView);
-			SmartBannerManager.init(this);
-			SmartBannerManager.show(CourseListMainActivity.this);
-		}
 	}
 
 	@Override
