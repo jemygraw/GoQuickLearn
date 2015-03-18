@@ -103,15 +103,15 @@ public class CourseListMainActivity extends ActionBarActivity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		switch (item.getItemId()) {
-		case android.R.id.home:
+		int itemId = item.getItemId();
+		if (itemId == android.R.id.home) {
 			return true;
-		case R.id.app_about_menu_item:
+		} else if (itemId == R.id.app_about_menu_item) {
 			Intent intent1 = new Intent(CourseListMainActivity.this,
 					AboutActivity.class);
 			this.startActivity(intent1);
 			return true;
-		case R.id.app_my_profile_menu_item:
+		} else if (itemId == R.id.app_my_profile_menu_item) {
 			Intent intent2 = new Intent(CourseListMainActivity.this,
 					MyProfileActivity.class);
 			this.startActivity(intent2);
