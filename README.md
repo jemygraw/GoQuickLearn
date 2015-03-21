@@ -2,7 +2,7 @@
 
 **Go轻松学**是我推出的一款学习GoLang的小型学习App。基于Android平台。主要包含**Go基础**和**Go实例**两部分。
 
-最新apk下载地址 [http://pan.baidu.com/s/1mgI5GSw](http://pan.baidu.com/s/1mgI5GSw)
+最新apk下载地址 [http://app.mi.com/detail/54217](http://app.mi.com/detail/54217)
 
 Go基础部分由本人的读书笔记归纳整理而来，而实例部分则由网址[http://gobyexample.com](http://gobyexample.com)翻译而来。翻译之前已经通过邮件获得了原作者的允许。
 
@@ -23,4 +23,7 @@ Go基础部分由本人的读书笔记归纳整理而来，而实例部分则由
 
 ![个人简历](GoQuickLearn_Submit/v2.4/readme_icon/go_profile.png)
 
-##赞助开发更多App！[https://me.alipay.com/jemygraw](https://me.alipay.com/jemygraw)
+##赞助开发更多App！
+![pay me](payme.jpg)
+
+
