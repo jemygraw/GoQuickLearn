@@ -29,6 +29,17 @@ proguard/
 *.iws
 .idea/
 
+# Windows thumbnail db
+Thumbs.db
+
+# OSX files
+.DS_Store
+
+# Android Stuido
+.idea
+.gradle
+build/
+
 GoQuickLearn/proguard_logs/dump.txt
 GoQuickLearn/proguard_logs/mapping.txt
 GoQuickLearn/proguard_logs/seeds.txt
