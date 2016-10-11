@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Go轻松学</string>
+    <string name="app_main_title">目录</string>
+    <string name="activity_content_view_title"></string>
+    <string name="activity_about_title">关于</string>
+    <string name="app_about">关于Go轻松学</string>
+    <string name="no_previous_chapter_tip">前面没有了哦!</string>
+    <string name="no_next_chapter_tip">这是最后一节啦!</string>
+    <string name="chapter_switch_tip">手指左滑或者右滑切换章节哦:-P</string>
+    <string name="previous_chapter">上一节</string>
+    <string name="next_chapter">下一节</string>
+    <string name="logo_desc">Go轻松学</string>
+    <string name="version">版本: </string>
+    <string name="publish_info">多科学堂出品</string>
+    <string name="weixin">微信公众号</string>
+    <string name="weixin_id">duokr_school</string>
+    <string name="qq_group">QQ群</string>
+    <string name="qq_group_id">332558747</string>
+    <string name="feedback_email">邮箱</string>
+    <string name="feedback_email_address">duokr.school@gmail.com</string>
+    <string name="go_lang_group">Go友团</string>
+    <string name="go_lang_group_link">http://baoz.me/#!/Go友团</string>
+    <string name="donate_info">赞助开发更多App :-P!</string>
+    <string name="donate_address">https://me.alipay.com/jemygraw</string>
+    <string name="my_profile">个人简历</string>
+    <string name="more_menu_item">更多</string>
+    <string name="github">Github</string>
+    <string name="github_address">https://github.com/jemygraw</string>
+
+</resources>

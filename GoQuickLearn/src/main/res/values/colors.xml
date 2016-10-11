@@ -1,0 +1,10 @@
+<resources>
+    <color name="about_bg">#eee</color>
+    <color name="about_blue">#0099cc</color>
+    <color name="white">#fff</color>
+    <color name="activity_bg_color">#ccc</color>
+    <color name="actionbar_bg_color">#33b5e5</color>
+    <color name="colorPrimary">#00E5FF</color>
+    <color name="colorPrimaryDark">#00B8D4</color>
+    <color name="colorAccent">#CDDC39</color>
+</resources>

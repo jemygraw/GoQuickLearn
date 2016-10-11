@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="elem_padding_top">5dp</dimen>
+    <dimen name="elem_padding_bottom">5dp</dimen>
+    <dimen name="elem_padding_left">5dp</dimen>
+    <dimen name="elem_padding_right">5dp</dimen>
+
+</resources>

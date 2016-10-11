@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<GoQuickLearn> 
+  <ContentList> 
+    <Content> 
+      <Name>Go Hello World</Name>  
+      <Abstract>一切源自经典!</Abstract>  
+      <Chapter>go_by_example/go_hello_world.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 数值</Name>  
+      <Abstract>丰富的数值类型。</Abstract>  
+      <Chapter>go_by_example/go_number.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 变量</Name>  
+      <Abstract>任何编程语言都有变量定义!</Abstract>  
+      <Chapter>go_by_example/go_variable.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 常量</Name>  
+      <Abstract>那些不变的都叫常量。</Abstract>  
+      <Chapter>go_by_example/go_constant.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go for循环</Name>  
+      <Abstract>循环就该如此简单!</Abstract>  
+      <Chapter>go_by_example/go_for_loop.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go if else条件判断</Name>  
+      <Abstract>经典条件判断必须支持!</Abstract>  
+      <Chapter>go_by_example/go_if_elseif.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go switch语句</Name>  
+      <Abstract>让选择不再复杂!</Abstract>  
+      <Chapter>go_by_example/go_switch.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 数组</Name>  
+      <Abstract>数组是区别于切片的固定长度的元素集合。</Abstract>  
+      <Chapter>go_by_example/go_array.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 切片</Name>  
+      <Abstract>变才是不变的,能变确实好!</Abstract>  
+      <Chapter>go_by_example/go_slice.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 字典</Name>  
+      <Abstract>一个键值对的集合。</Abstract>  
+      <Chapter>go_by_example/go_map.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go range函数</Name>  
+      <Abstract>range是遍历神器!</Abstract>  
+      <Chapter>go_by_example/go_range.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 函数定义</Name>  
+      <Abstract>函数是必须有的功能。</Abstract>  
+      <Chapter>go_by_example/go_func_define.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 函数命名返回值</Name>  
+      <Abstract>存在就是合理的方便的!</Abstract>  
+      <Chapter>go_by_example/go_func_named_ret_value.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 函数回调</Name>  
+      <Abstract>这个功能很酷,当然你不一定理解!</Abstract>  
+      <Chapter>go_by_example/go_func_callback.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 函数多返回值</Name>  
+      <Abstract>实践️️会证明支持多返回值是很方便的!</Abstract>  
+      <Chapter>go_by_example/go_func_multiple_ret_value.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 可变长参数列表</Name>  
+      <Abstract>比较实用的功能。</Abstract>  
+      <Chapter>go_by_example/go_variable_argument_list.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 闭包函数</Name>  
+      <Abstract>如果你看出它好在那里,它就好在那里。</Abstract>  
+      <Chapter>go_by_example/go_func_closure.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 递归函数</Name>  
+      <Abstract>只能说是很好的功能。</Abstract>  
+      <Chapter>go_by_example/go_recursion.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 指针</Name>  
+      <Abstract>有用却不复杂的功能。</Abstract>  
+      <Chapter>go_by_example/go_pointer.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 结构体</Name>  
+      <Abstract>简单实用的结构体。</Abstract>  
+      <Chapter>go_by_example/go_struct.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 方法</Name>  
+      <Abstract>穿了马甲的函数。</Abstract>  
+      <Chapter>go_by_example/go_method.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 接口</Name>  
+      <Abstract>一样强大,不一样简单的功能。</Abstract>  
+      <Chapter>go_by_example/go_interface.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 错误处理</Name>  
+      <Abstract>有错要改,更要预防!</Abstract>  
+      <Chapter>go_by_example/go_error_handle.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 并行功能</Name>  
+      <Abstract>未来计算的趋势。</Abstract>  
+      <Chapter>go_by_example/go_parallel.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 并行通道Channel</Name>  
+      <Abstract>支持并行协程的通讯。</Abstract>  
+      <Chapter>go_by_example/go_parallel_channel.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 通道缓冲</Name>  
+      <Abstract>缓冲就是用来提升处理速度的。</Abstract>  
+      <Chapter>go_by_example/go_buffered_channel.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 通道的同步功能</Name>  
+      <Abstract>信息需要同步,同步需要通道。</Abstract>  
+      <Chapter>go_by_example/go_channel_sync.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 通道方向</Name>  
+      <Abstract>通道也可以设置为只写或是只读的。</Abstract>  
+      <Chapter>go_by_example/go_channel_direction.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 通道选择Select</Name>  
+      <Abstract>哪个ready选哪个。</Abstract>  
+      <Chapter>go_by_example/go_channel_select.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 超时</Name>  
+      <Abstract>不傻等就得超时!</Abstract>  
+      <Chapter>go_by_example/go_timeout.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 非阻塞通道</Name>  
+      <Abstract>阻塞有助于同步,非阻塞有助于并发。</Abstract>  
+      <Chapter>go_by_example/go_non_blocking_channel.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 关闭通道</Name>  
+      <Abstract>通道关闭了,就只出不进了。</Abstract>  
+      <Chapter>go_by_example/go_channel_close.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 遍历通道</Name>  
+      <Abstract>又可以看到range的身影。</Abstract>  
+      <Chapter>go_by_example/go_channel_range.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go Timer</Name>  
+      <Abstract>掌握你自己的时间。</Abstract>  
+      <Chapter>go_by_example/go_timer.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go Ticker</Name>  
+      <Abstract>滴答滴答。等等执行。</Abstract>  
+      <Chapter>go_by_example/go_ticker.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 工作池</Name>  
+      <Abstract>工作池是一个高级内容。</Abstract>  
+      <Chapter>go_by_example/go_working_pool.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 请求处理频率控制</Name>  
+      <Abstract>双拳不敌四掌,该控制得控制。</Abstract>  
+      <Chapter>go_by_example/go_req_freq_control.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 原子计数器</Name>  
+      <Abstract>所谓原子就是一次只能有一个协程访问。</Abstract>  
+      <Chapter>go_by_example/go_atomic_counter.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 互斥</Name>  
+      <Abstract>不能同时拥有的就是互斥的!</Abstract>  
+      <Chapter>go_by_example/go_mutex.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 状态协程</Name>  
+      <Abstract>专门负责管理状态的协程。</Abstract>  
+      <Chapter>go_by_example/go_stateful_goroutine.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 排序</Name>  
+      <Abstract>排序是常用算法。</Abstract>  
+      <Chapter>go_by_example/go_sort.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 自定义排序</Name>  
+      <Abstract>想怎么排序随你!</Abstract>  
+      <Chapter>go_by_example/go_customized_sort.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go Panic</Name>  
+      <Abstract>不希望发生或者无法预期的事情只能panic!</Abstract>  
+      <Chapter>go_by_example/go_panic.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go Defer</Name>  
+      <Abstract>推迟但是一定会发生的事情。</Abstract>  
+      <Chapter>go_by_example/go_defer.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 集合操作</Name>  
+      <Abstract>需要自己动手实现集合的操作。</Abstract>  
+      <Chapter>go_by_example/go_collection_manipulate.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go String与Byte切片之间的转换</Name>  
+      <Abstract>Go里面string是由bytes构成的。</Abstract>  
+      <Chapter>go_by_example/go_string_byte_convert.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 字符串操作函数</Name>  
+      <Abstract>字符串操作是程序语言的基本功能。</Abstract>  
+      <Chapter>go_by_example/go_string_manipulate.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 字符串格式化</Name>  
+      <Abstract>有格式,才有美感。</Abstract>  
+      <Chapter>go_by_example/go_string_format.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 正则表达式</Name>  
+      <Abstract>掌握了正则表达式,你才是高手。</Abstract>  
+      <Chapter>go_by_example/go_regex.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go JSON支持</Name>  
+      <Abstract>内置JSON数据格式支持。</Abstract>  
+      <Chapter>go_by_example/go_json.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 时间</Name>  
+      <Abstract>时间是宇宙的组成部分。</Abstract>  
+      <Chapter>go_by_example/go_time.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 时间戳</Name>  
+      <Abstract>计算机的时间是有起点的。</Abstract>  
+      <Chapter>go_by_example/go_timestamp.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 时间格式化和解析</Name>  
+      <Abstract>世界上不同地区的时间格式是不一样的。</Abstract>  
+      <Chapter>go_by_example/go_time_format_parse.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 随机数</Name>  
+      <Abstract>虽然是伪随机数,但也是随机数啊。</Abstract>  
+      <Chapter>go_by_example/go_rand_number.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 数字解析</Name>  
+      <Abstract>数字解析是必备功能。</Abstract>  
+      <Chapter>go_by_example/go_number_parse.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go URL解析</Name>  
+      <Abstract>让你充分了解URL构成的解析方式!</Abstract>  
+      <Chapter>go_by_example/go_url_parse.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go SHA1 散列</Name>  
+      <Abstract>内置SHA1散列支持!</Abstract>  
+      <Chapter>go_by_example/go_sha1_hash.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go Base64编码</Name>  
+      <Abstract>内置Base64编码支持。</Abstract>  
+      <Chapter>go_by_example/go_base64_encoding.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 读取文件</Name>  
+      <Abstract>读取文件内容是必须会的。</Abstract>  
+      <Chapter>go_by_example/go_read_file.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 写入文件</Name>  
+      <Abstract>写文件是必须会的。</Abstract>  
+      <Chapter>go_by_example/go_write_file.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go Line Filters</Name>  
+      <Abstract>知道Pipe么? 这个就是!</Abstract>  
+      <Chapter>go_by_example/go_line_filters.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 命令行参数</Name>  
+      <Abstract>构建命令行程序所必须了解的。</Abstract>  
+      <Chapter>go_by_example/go_cmd_line_argument.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 命令行参数标记</Name>  
+      <Abstract>提供默认选项值之外的选择。</Abstract>  
+      <Chapter>go_by_example/go_cmd_line_tag.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 环境变量</Name>  
+      <Abstract>一种常见的变量配置方式。</Abstract>  
+      <Chapter>go_by_example/go_environment_variable.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 进程触发</Name>  
+      <Abstract>调用别的进程获取它的输出。</Abstract>  
+      <Chapter>go_by_example/go_process_trigger.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 进程执行</Name>  
+      <Abstract>放弃自己,调用别的进程来执行。</Abstract>  
+      <Chapter>go_by_example/go_process_run.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go 信号处理</Name>  
+      <Abstract>信号处理是操作系统不可或缺的一部分。</Abstract>  
+      <Chapter>go_by_example/go_signal_handle.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>Go Exit</Name>  
+      <Abstract>一般不需要但是还是有用的功能。</Abstract>  
+      <Chapter>go_by_example/go_exit.html</Chapter> 
+    </Content> 
+  </ContentList> 
+</GoQuickLearn>

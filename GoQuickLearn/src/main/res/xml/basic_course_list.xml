@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<GoQuickLearn> 
+  <ContentList> 
+    <Content> 
+      <Name>Go语言安装与测试</Name>  
+      <Abstract>轻松友好的安装方式，多平台支持。</Abstract>  
+      <Chapter>go_tutorial/go_tutorial_1_how_to_install_go.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>内置基础数据类型</Name>  
+      <Abstract>认识Go提供的清晰的数据类型，很清晰，不骗你。</Abstract>  
+      <Chapter>go_tutorial/go_tutorial_2_data_type.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>变量与常量定义</Name>  
+      <Abstract>学语言绕不开的变量，当然Go是静态语言，变量都是有固定类型的，程序运行过程中无法改变变量类型。</Abstract>  
+      <Chapter>go_tutorial/go_tutorial_3_variable.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>控制流程</Name>  
+      <Abstract>很简单，只有if，for，switch三种流程，连while都没有。</Abstract>  
+      <Chapter>go_tutorial/go_tutorial_4_control_structure.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>数组，切片和字典</Name>  
+      <Abstract>内置高级数据类型。如果我们需要频繁使用一些功能，与其提供包支持，不如作为内置功能提供。</Abstract>  
+      <Chapter>go_tutorial/go_tutorial_5_array_slice_map.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>使用函数</Name>  
+      <Abstract>代码的功能要精简，那么使用函数吧！</Abstract>  
+      <Chapter>go_tutorial/go_tutorial_6_func.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>清楚的指针</Name>  
+      <Abstract>不要怕，Go的指针不是C的指针，不可怕，但很有用。</Abstract>  
+      <Chapter>go_tutorial/go_tutorial_7_pointer.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>结构体和接口</Name>  
+      <Abstract>非常Cool的结构体功能，完全和C不同，很方便；另外Go提供的接口设计独特，值得研究。</Abstract>  
+      <Chapter>go_tutorial/go_tutorial_8_struct_interface.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>并行计算</Name>  
+      <Abstract>让你一见钟情的超酷功能！</Abstract>  
+      <Chapter>go_tutorial/go_tutorial_9_parallel_compute.html</Chapter> 
+    </Content>  
+    <Content> 
+      <Name>使用包和测试</Name>  
+      <Abstract>良好的项目管理支持也是一门语言的独特之处。标准的测试用例是控制项目Bug的有效手段。</Abstract>  
+      <Chapter>go_tutorial/go_tutorial_10_use_package_test.html</Chapter> 
+    </Content> 
+  </ContentList> 
+</GoQuickLearn>
