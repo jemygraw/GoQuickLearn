@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<link rel="stylesheet" href="default.css">
+<script src="highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<title>Go 变量</title>
+</head>
+<body>
+<p>Go是静态类型语言，变量是有明确类型的。编译器会检查函数调用中，变量类型的正确性。</p>
+<p>使用<code>var</code>关键字来定义变量。</p>
+<p>Go 的基本类型有：</p>
+<ul>
+<li>bool</li>
+<li>string</li>
+<li>int  int8  int16  int32  int64</li>
+<li>uint uint8 uint16 uint32 uint64 uintptr</li>
+<li>byte // uint8 的别名</li>
+<li>rune // int32 的别名 代表一个Unicode码</li>
+<li>float32 float64</li>
+<li>complex64 complex128</li>
+</ul>
+<p>看看下面的例子</p>
+<pre><code>package main
+
+import "fmt"
+
+func main() {
+    // `var` 关键字用来定义一个或者多个变量
+    var a string = "initial"
+    fmt.Println(a)
+
+    // 你一次可以定义多个变量
+    var b, c int = 1, 2
+    fmt.Println(b, c)
+
+    // Go会推断出具有初始值的变量的类型
+    var d = true
+    fmt.Println(d)
+
+    //定义变量时，没有给出初始值的变量被默认初始化为零值
+    //整型的零值就是0
+    var e int
+    fmt.Println(e)
+
+    //":=" 语法是同时定义和初始化变量的快捷方式
+    f := "short"
+    fmt.Println(f)
+}
+</code></pre>
+<p>输出结果为</p>
+<pre><code>initial
+1 2
+true
+0
+short
+</code></pre></body>
+</html>

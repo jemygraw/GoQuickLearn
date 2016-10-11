@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<link rel="stylesheet" href="default.css">
+<script src="highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<title>Hello World</title>
+
+</head>
+<body>
+<p>我们的第一个例子是打印经典的“hello world”信息，我们先看下代码。</p>
+
+<pre><code>package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("hello world")
+}
+</code></pre>
+
+<p>输出结果为：</p>
+
+<pre><code>hello world
+</code></pre>
+
+<p>为了使一个<code>go文件</code>能够<code>编译</code>为<code>可执行文件</code>，包名必须是<code>main</code>，然后我们导入提供格式化输出的<code>fmt</code>包，该程序的执行入口是<code>func main()</code>函数，在函数里面，我们使用<code>fmt</code>包提供的<code>Println</code>函数来输出"hello world"字符串。</p>
+
+<p>为了运行这个程序，我们可以使用<code>go run hello_world.go</code>来运行这个例子，这样是直接输出运行结果而不会产生任何中间文件。但是有的时候我们希望能够将程序编译为二进制文件保存起来，我们可以像上面一样使用<code>go build hello_world.go</code>来将源代码编译为二进制可执行文件。然后我们可以直接运行这个二进制可执行文件。</p>
+
+<p>好了，第一个例子就这样结束了。很简单。</p>
+</body>
+</html>

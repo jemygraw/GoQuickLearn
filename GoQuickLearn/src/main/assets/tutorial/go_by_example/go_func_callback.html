@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<link rel="stylesheet" href="default.css">
+<script src="highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<title>Go 函数回调</title>
+</head>
+<body>
+<p>Go支持函数回调，你可以把函数名称作为参数传递给另外一个函数，然后在别的地方实现这个函数。</p>
+<pre><code>package main
+
+import "fmt"
+
+type Callback func(x, y int) int
+
+func main() {
+    x, y := 1, 2
+    fmt.Println(test(x, y, add))
+}
+
+//提供一个接口，让外部去实现
+func test(x, y int, callback Callback) int {
+    return callback(x, y)
+}
+
+func add(x, y int) int {
+    return x + y
+}
+</code></pre>
+<p>运行结果</p>
+<pre><code>3
+</code></pre></body>
+</html>
