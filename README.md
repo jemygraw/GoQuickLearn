@@ -21,9 +21,4 @@ Go基础部分由本人的读书笔记归纳整理而来，而实例部分则由
 ![实例举例](GoQuickLearn_Submit/v2.4/readme_icon/go_example_range.png)
 
 
-![个人简历](GoQuickLearn_Submit/v2.4/readme_icon/go_profile.png)
-
-##赞助开发更多App！
-![pay me](payme.jpg)
-
 
